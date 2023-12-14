@@ -5,10 +5,19 @@ FROM python:3.9.13
 WORKDIR /app
 
 
-# Copy the requirements file and install dependencies
+# Copy the requirements file 
 COPY requirements.txt .
+
+# Install virtualenv
+RUN pip install virtualenv
+
+# Create a virtual environment and activate it
+RUN virtualenv venv
+RUN /bin/bash -c "source venv/bin/activate"
+
+# install dependencies
 RUN pip install --upgrade pip
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Copy the API script and model into the container
 COPY api.py .
