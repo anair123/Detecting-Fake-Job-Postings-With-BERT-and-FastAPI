@@ -7,13 +7,6 @@ WORKDIR /app
 # Copy the requirements file 
 COPY requirements.txt .
 
-# Install virtualenv
-RUN pip install virtualenv
-
-# Create a virtual environment and activate it
-RUN virtualenv venv
-RUN /bin/bash -c "source venv/bin/activate"
-
 # install dependencies
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
