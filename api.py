@@ -38,3 +38,4 @@ def predict_fraudulence(text: str):
 async def predict_text(input_data: PredictionInput):
     predicted_label = predict_fraudulence(input_data.text)
     return {"prediction": predicted_label}
+
