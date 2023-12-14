@@ -4,7 +4,6 @@ FROM python:3.9.13
 # Set the working directory inside the container
 WORKDIR /app
 
-
 # Copy the requirements file 
 COPY requirements.txt .
 

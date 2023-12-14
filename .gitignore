@@ -5,3 +5,4 @@ Model/*
 fastapi_env/
 test_prediction_function.py
 test_venv/
+test_venv2/
