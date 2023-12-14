@@ -1,6 +1,6 @@
 import requests
 
-api_endpoint = 'http://127.0.0.1:8000/predict/'
+api_endpoint = 'http://localhost:8000/predict'
 
 input_text = "This is a good job for you. Trust me...."
 
