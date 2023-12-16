@@ -17,7 +17,6 @@ max_length = 512
 class PredictionInput(BaseModel):
     text: str
 
-
 # make classification based on given text
 def predict_fraudulence(text: str):
     tokenized_sentence = tokenizer.encode_plus(
